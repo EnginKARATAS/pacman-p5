@@ -22,7 +22,7 @@ function draw() {
 	for (let i =  dots.length-1; i > 0; i--) {
 		isIntersect = pacman.eat(pacman.x, pacman.y, dots[i].x, dots[i].y, dots[i].size);
 
-		if (dots.length-1 < 2) {
+		if (dots.length-1 < 4) {
 			dots.push(new Dot());
 		}
 		

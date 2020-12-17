@@ -8,12 +8,14 @@ class Pacman {
 		this.rotation = 0;
 		this.angel = 20;
 		this.size = 30;
+		this.red = 255;
+		this.green = 255;
+		this.blue = 0;
 	}
 	eat(pacmanX, pacmanY, dotX, dotY,dotSize) {
 		let distance = dist(pacmanX, pacmanY, dotX, dotY);
 
 		if (distance >= 0 && distance < 30) {
-			console.log("bir kere girdi");
 			this.size += dotSize;
 			return true;//true == shift
 		}
@@ -21,7 +23,7 @@ class Pacman {
 		else {
 			if (this.size > 30) {
 
-				this.size -= 0.1;
+				this.size -= 0.03;
 			}
 			return false;
 		}
@@ -29,13 +31,22 @@ class Pacman {
 	}
 	show() {
 		//	fill(random(0,255),random(0,255),random(0,255));
-		fill(255, 255, 0);
+		fill(this.red, this.green, this.blue);
 		//		translate(this.x, this.y)
 		//angleMode(DEGREES);
 		arc(this.x, this.y, this.size, this.size, this.rotation + this.angel - cos(this.angMouth) * this.angel, this.rotation - this.angel + cos(this.angMouth) * this.angel);
 		this.angMouth += 15; //speed mouth
 		fill(0);
-		ellipse(this.x - this.eyeX, this.y - this.eyeY, 8)
+		let biggereye = this.size * 0.02;
+		if (this.size % 100 < 4) {
+				this.size /= 2;
+				this.red=200*0.3;
+				this.green = 200*0.6;
+				this.blue += 50;
+				
+		}
+		
+		ellipse(this.x - this.eyeX*biggereye, this.y - this.eyeY*biggereye, 8)
 	}
 	update(way) {
 		if (way == 0) {
