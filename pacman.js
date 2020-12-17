@@ -22,14 +22,14 @@ class Pacman {
 
 		else {
 			if (this.size > 30) {
-
-				this.size -= 0.03;
+				this.size -= 0.03; //reduce size
 			}
 			return false;
 		}
 
 	}
 	show() {
+
 		//	fill(random(0,255),random(0,255),random(0,255));
 		fill(this.red, this.green, this.blue);
 		//		translate(this.x, this.y)
@@ -38,7 +38,8 @@ class Pacman {
 		this.angMouth += 15; //speed mouth
 		fill(0);
 		let biggereye = this.size * 0.02;
-		if (this.size % 100 < 4) {
+		if (this.size % 100 < 4 ) {
+				score -= 2;
 				this.size /= 2;
 				this.red=random(150,250) ;
 				this.green = random(150,250);
