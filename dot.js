@@ -8,7 +8,5 @@ class Dot {
         fill(random(255), random(255), random(255));
         ellipse(this.x, this.y, this.size)
     }
-    eat(pacmanX,pacmanY, dotX,dotY){
-        console.log("hello"+pacmanX+pacmanY+dotX+dotY);
-    }
+    
 }
