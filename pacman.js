@@ -38,7 +38,7 @@ class Pacman {
 		this.angMouth += 15; //speed mouth
 		fill(0);
 		let biggereye = this.size * 0.02;
-		if (this.size % 100 < 4 ) {
+		if (this.size % 100 < 4 && isInGame) {
 				score -= 2;
 				this.size /= 2;
 				this.red=random(150,250) ;
