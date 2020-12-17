@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-	translate(pacman.x,pacman.y);
+	//translate(pacman.x,pacman.y);//pacmanı hızlandırıyor neden bilmiyorum
 	background(0);
 	pacman.show(way);
 	pacman.update(way);
