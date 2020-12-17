@@ -12,9 +12,8 @@ function setup() {
 function draw() {
 	translate(pacman.x,pacman.y);
 	background(0);
-	pacman.show();
+	pacman.show(way);
 	pacman.update(way);
-
 }
 
 function keyPressed() {
