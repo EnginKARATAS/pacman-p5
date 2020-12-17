@@ -40,8 +40,8 @@ class Pacman {
 		let biggereye = this.size * 0.02;
 		if (this.size % 100 < 4) {
 				this.size /= 2;
-				this.red=200*0.3;
-				this.green = 200*0.6;
+				this.red=200*0.8;
+				this.green = 200*0.8;
 				this.blue += 50;
 				
 		}
