@@ -40,9 +40,9 @@ class Pacman {
 		let biggereye = this.size * 0.02;
 		if (this.size % 100 < 4) {
 				this.size /= 2;
-				this.red=200*0.8;
-				this.green = 200*0.8;
-				this.blue += 50;
+				this.red=random(150,250) ;
+				this.green = random(150,250);
+				this.blue = 255;
 				
 		}
 		
