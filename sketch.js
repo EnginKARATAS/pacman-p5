@@ -28,7 +28,7 @@ function draw() {
 		text("Reach 50 ", 40, height * 0.5)
 		text("If you can ", 40, height * 0.7)
 	}
-	else if (score > 0 && score <= 3) {
+	else if (score > 0 && score <= 50) {
 		if (frameCount % 60 == 0) {
 			timer ++;
 			console.log(timer);
@@ -38,7 +38,7 @@ function draw() {
 		fill(random(0, 255), random(0, 255), random(0, 255));
 		text("SCORE :" + score, 20, height * 0.1)
 		textSize(20)
-		text("TIME:" +  timer, height * 0.09)
+		text("TIME:" +  timer, 300 ,height * 0.09)
 	}
 
 	else {
