@@ -1,3 +1,4 @@
+play with arrow keys https://pacman-p5-ilt8yrwri-enginkaratas-projects.vercel.app/
 # pacman-p5
 LİVE DEMO:
 
